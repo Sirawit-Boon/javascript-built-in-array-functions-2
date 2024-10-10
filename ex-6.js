@@ -2,6 +2,18 @@ const carCollection = ["toyota", "fiat", "honda", "bmw"];
 
 function updateCarCollection(carBrand) {
   // Start coding here
+  // carCollection.splice(4,0,carBrand)
+  // if (carBrand == carCollection)
+  //   {return `new car collection is : ${carCollection.join()}`}
+  // else {return `${carBrand} has already existed in the ${carCollection.length}position of car collection`}
+  if (carCollection.includes(carBrand)) {
+    return `${carBrand} already existed in the ${
+      carCollection.indexOf(carBrand) + 1
+    } of car collection.`;
+  } else {
+    carCollection.push(carBrand);
+    return `new car collection is : ${carCollection}`;
+  }
 }
 
 //ผลลัพธ์ที่ควรได้จาก Example case
